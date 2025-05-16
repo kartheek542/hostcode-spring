@@ -1,49 +1,21 @@
-package com.rak.hostcode.model;
-
-import jakarta.persistence.*;
+package com.rak.hostcode.dto;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "users")
-public class User {
+public class UserDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "uid")
     private int uid;
-
-    @Column(name = "username")
     private String username;
-
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "email")
     private String email;
-
-    @Column(name = "mobile")
     private String mobile;
-
-    @Column(name = "first_name")
     private String firstName;
-
-    @Column(name = "last_name")
     private String lastName;
-
-    @Column(name = "dob")
     private LocalDate dateOfBirth;
-
-    @Column(name = "organization")
     private String organization;
 
-    public User() {
-    }
-
-    public User(int uid, String username, String password, String email, String mobile, String firstName, String lastName, LocalDate dateOfBirth, String organization) {
+    public UserDTO(int uid, String username, String email, String mobile, String firstName, String lastName, LocalDate dateOfBirth, String organization) {
         this.uid = uid;
         this.username = username;
-        this.password = password;
         this.email = email;
         this.mobile = mobile;
         this.firstName = firstName;
@@ -66,14 +38,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getEmail() {

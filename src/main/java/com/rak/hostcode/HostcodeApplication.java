@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HostcodeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HostcodeApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(HostcodeApplication.class, args);
+    }
 
 }
